@@ -487,7 +487,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16">
-                    <button id="testDriveButton" class="btn-primary px-8 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg flex items-center justify-center space-x-3 w-full sm:w-auto">
+                    <button id="testDriveButton" class="btn-primary px-8 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg flex items-center justify-center space-x-3 w-full sm:w-auto" onclick="window.location.href='https://app.loanbuddy.cloud/auth?tab=register'">
                         <i data-lucide="zap" class="w-5 h-5"></i>
                         <span>Teste Grátis por 3 Dias</span>
                     </button>
@@ -527,6 +527,7 @@
                             <button
                                 id="startTestButtonVideo"
                                 class="btn-primary px-10 py-4 rounded-xl text-lg flex items-center justify-center space-x-3"
+                                onclick="window.location.href='https://app.loanbuddy.cloud/auth?tab=register'"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 <span>Começar Teste Grátis</span>
@@ -738,7 +739,7 @@
             <p class="text-lg sm:text-xl mb-10 sm:mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
                 Junte-se a milhares de empresários que já revolucionaram os seus negócios com o LoanBuddy Pro.
             </p>
-            <button id="ctaButton" class="btn-cta px-10 py-4 sm:px-12 rounded-xl text-base sm:text-lg font-bold flex items-center space-x-3 mx-auto shadow-floating">
+            <button id="ctaButton" class="btn-cta px-10 py-4 sm:px-12 rounded-xl text-base sm:text-lg font-bold flex items-center space-x-3 mx-auto shadow-floating" onclick="window.location.href='https://app.loanbuddy.cloud/auth?tab=register'">
                 <i data-lucide="zap" class="w-5 h-5"></i>
                 <span>Começar Teste Grátis</span>
             </button>
@@ -862,7 +863,7 @@
         // --- CORE LOGIC ---
         // This function handles navigation to the authentication page.
         function navigateToAuth(tab = 'login') {
-            const url = `https://loanbuddy.cloud/auth?tab=${tab}`;
+            const url = `https://app.loanbuddy.cloud/auth?tab=${tab}`;
             window.location.href = url;
         }
         
@@ -904,7 +905,7 @@
                         </ul>
                     </div>
                     
-                    <button class="plan-cta ${isPopular ? '' : 'btn-secondary'}" onclick="navigateToAuth('register')">
+                    <button class="plan-cta ${isPopular ? '' : 'btn-secondary'}" onclick="window.location.href='https://app.loanbuddy.cloud/auth?tab=register'">
                         ${plan.ctaText}
                     </button>
                 `;
@@ -1012,10 +1013,7 @@
 
             // --- EVENT LISTENERS ---
             document.getElementById('loginButton')?.addEventListener('click', () => navigateToAuth('login'));
-            document.getElementById('testDriveButton')?.addEventListener('click', () => navigateToAuth('register'));
             document.getElementById('demoButton')?.addEventListener('click', () => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' }));
-            document.getElementById('ctaButton')?.addEventListener('click', () => navigateToAuth('register'));
-            document.getElementById('startTestButtonVideo')?.addEventListener('click', () => navigateToAuth('register')); // ADDED EVENT LISTENER
 
             // NEW: Pricing toggle logic
             const pricingToggle = document.getElementById('pricingToggle');
