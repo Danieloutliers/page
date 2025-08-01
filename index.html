@@ -862,8 +862,8 @@
 
         // --- CORE LOGIC ---
         // This function handles navigation to the authentication page.
-        function navigateToAuth(tab = 'login') {
-            const url = `https://app.loanbuddy.cloud/auth?tab=${tab}`;
+        function navigateToAuth(tab = '') {
+            const url = `https://app.loanbuddy.cloud/auth${tab}`;
             window.location.href = url;
         }
         
