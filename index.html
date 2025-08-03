@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons CDN for SVG injection -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         /* * MODERN CSS DESIGN SYSTEM
          * This system uses CSS variables for a consistent and easily themeable design.
@@ -71,23 +69,23 @@
 
         /* Modern Background Gradients */
         .hero-gradient {
-            background:
+            background: 
                 radial-gradient(circle at top right, hsl(var(--primary) / 0.03) 0%, transparent 50%),
                 radial-gradient(circle at bottom left, hsl(var(--secondary) / 0.03) 0%, transparent 50%),
                 linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
         }
 
         .section-gradient {
-            background:
+            background: 
                 radial-gradient(circle at top, hsl(var(--primary) / 0.02) 0%, transparent 70%),
                 hsl(var(--background));
         }
 
         /* Glass Morphism Effects */
         .glass-card {
-            background: linear-gradient(135deg,
-                    hsl(var(--surface) / 0.8) 0%,
-                    hsl(var(--surface-elevated) / 0.7) 100%);
+            background: linear-gradient(135deg, 
+                hsl(var(--surface) / 0.8) 0%, 
+                hsl(var(--surface-elevated) / 0.7) 100%);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid hsl(var(--border));
@@ -102,21 +100,10 @@
         }
 
         /* Modern Shadows System */
-        .shadow-elegant {
-            box-shadow: 0 1px 3px hsl(var(--shadow-color)), 0 1px 2px hsl(var(--shadow-color));
-        }
-
-        .shadow-elevated {
-            box-shadow: 0 4px 6px -1px hsl(var(--shadow-color)), 0 2px 4px -1px hsl(var(--shadow-color));
-        }
-
-        .shadow-floating {
-            box-shadow: 0 10px 15px -3px hsl(var(--shadow-color)), 0 4px 6px -2px hsl(var(--shadow-color));
-        }
-
-        .shadow-glow {
-            box-shadow: 0 0 20px hsl(var(--primary) / 0.3), 0 0 40px hsl(var(--secondary) / 0.2);
-        }
+        .shadow-elegant { box-shadow: 0 1px 3px hsl(var(--shadow-color)), 0 1px 2px hsl(var(--shadow-color)); }
+        .shadow-elevated { box-shadow: 0 4px 6px -1px hsl(var(--shadow-color)), 0 2px 4px -1px hsl(var(--shadow-color)); }
+        .shadow-floating { box-shadow: 0 10px 15px -3px hsl(var(--shadow-color)), 0 4px 6px -2px hsl(var(--shadow-color)); }
+        .shadow-glow { box-shadow: 0 0 20px hsl(var(--primary) / 0.3), 0 0 40px hsl(var(--secondary) / 0.2); }
 
         /* Enhanced Button Styles */
         .btn-primary {
@@ -149,13 +136,13 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px hsl(var(--shadow-color)), 0 6px 6px hsl(var(--shadow-color));
         }
-
+        
         .btn-cta {
-            background: white;
-            color: hsl(var(--primary-dark));
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+             background: white;
+             color: hsl(var(--primary-dark));
+             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
+        
         .btn-cta:hover {
             background: hsl(var(--muted));
             transform: translateY(-2px);
@@ -163,55 +150,28 @@
         }
 
         /* Advanced Animations */
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out;
-        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-slide-up { animation: slideUp 0.8s ease-out; }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
 
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Enhanced Hover Effects */
-        .hover-lift {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
+        .hover-lift { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .hover-lift:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px hsl(var(--shadow-color)), 0 10px 10px -5px hsl(var(--shadow-color));
         }
 
-        .hover-scale {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
+        .hover-scale { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-scale:hover { transform: scale(1.05); }
 
         /* Enhanced Typography */
         .text-display {
@@ -228,11 +188,7 @@
             letter-spacing: -0.025em;
         }
 
-        .text-body-lg {
-            font-size: 1.125rem;
-            line-height: 1.7;
-            font-weight: 400;
-        }
+        .text-body-lg { font-size: 1.125rem; line-height: 1.7; font-weight: 400; }
 
         /* Icon Enhancements */
         .icon-gradient {
@@ -256,10 +212,9 @@
             background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
             transform-origin: 0%;
             z-index: 9999;
-            transform: scaleX(0);
-            /* Initial state */
+            transform: scaleX(0); /* Initial state */
         }
-
+        
         /* --- MODERN PRICING SECTION STYLES --- */
         #pricing {
             position: relative;
@@ -282,15 +237,10 @@
         }
 
         @keyframes rotateBackground {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
         }
-
+        
         .pricing-toggle {
             display: inline-flex;
             align-items: center;
@@ -363,7 +313,6 @@
             .plan-card--popular {
                 transform: scale(1.05);
             }
-
             .plan-card--popular:hover {
                 transform: scale(1.1) translateY(-12px);
                 box-shadow: 0 25px 50px -12px hsl(var(--primary) / 0.5);
@@ -380,7 +329,7 @@
         .plan-card--popular .plan-features li {
             color: hsl(0 0% 100% / 0.85);
         }
-
+        
         .plan-card--popular .plan-header {
             border-bottom-color: hsl(0 0% 100% / 0.2);
         }
@@ -398,9 +347,8 @@
         .plan-card--popular .plan-cta:hover {
             background: hsl(var(--muted));
             transform: translateY(-2px) scale(1.03);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
         /* END OF UPDATED STYLES */
 
         .plan-badge {
@@ -496,7 +444,6 @@
         }
     </style>
 </head>
-
 <body class="min-h-screen bg-background overflow-x-hidden">
     <!-- Scroll Indicator -->
     <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -513,8 +460,7 @@
                         LoanBuddy Pro
                     </h1>
                 </div>
-                <button id="loginButton"
-                    class="btn-primary px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl flex items-center space-x-2 text-sm sm:text-base">
+                <button id="loginButton" class="btn-primary px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl flex items-center space-x-2 text-sm sm:text-base">
                     <span>Login</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
@@ -526,52 +472,41 @@
     <section class="py-16 sm:py-24 hero-gradient relative overflow-hidden">
         <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
             <div class="animate-slide-up">
-                <span
-                    class="inline-flex items-center rounded-full bg-primary/10 text-primary px-4 py-2 text-sm font-semibold mb-6 sm:mb-8 shadow-elegant">
+                <span class="inline-flex items-center rounded-full bg-primary/10 text-primary px-4 py-2 text-sm font-semibold mb-6 sm:mb-8 shadow-elegant">
                     <i data-lucide="sparkles" class="w-4 h-4 mr-2"></i>
                     Nova versão com IA
                 </span>
 
                 <h1 class="text-display mb-6 sm:mb-8 tracking-tight">
-                    <span class="text-gradient-primary font-black">Revolucione</span> <span
-                        class="font-light">seu</span><br />
+                    <span class="text-gradient-primary font-black">Revolucione</span> <span class="font-light">seu</span><br />
                     <span class="text-gradient-accent font-black">Negócio de Contratos</span>
                 </h1>
 
                 <p class="text-lg sm:text-body-lg text-muted-foreground mb-10 sm:mb-12 max-w-4xl mx-auto">
-                    O sistema mais completo e intuitivo para gerenciar contratos, controlar pagamentos e fazer seu
-                    negócio crescer.
+                    O sistema mais completo e intuitivo para gerenciar contratos, controlar pagamentos e fazer seu negócio crescer.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16">
-                    <button id="testDriveButton"
-                        class="btn-primary px-8 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg flex items-center justify-center space-x-3 w-full sm:w-auto">
+                    <button id="testDriveButton" class="btn-primary px-8 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg flex items-center justify-center space-x-3 w-full sm:w-auto">
                         <i data-lucide="zap" class="w-5 h-5"></i>
                         <span>Teste Grátis por 3 Dias</span>
                     </button>
-                    <button id="demoButton"
-                        class="btn-secondary px-8 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg flex items-center justify-center space-x-3 w-full sm:w-auto">
+                    <button id="demoButton" class="btn-secondary px-8 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg flex items-center justify-center space-x-3 w-full sm:w-auto">
                         <i data-lucide="play-circle" class="w-5 h-5"></i>
                         <span>Ver Demonstração</span>
                     </button>
                 </div>
-
+            
                 <!-- MOVED VIDEO DEMO HERE -->
                 <div id="demo" class="max-w-6xl mx-auto mb-12 sm:mb-16">
                     <div class="glass-card p-2 sm:p-4 rounded-2xl sm:rounded-3xl shadow-floating hover-lift">
-                        <div
-                            class="aspect-video bg-muted rounded-xl sm:rounded-2xl overflow-hidden relative shadow-elevated">
+                        <div class="aspect-video bg-muted rounded-xl sm:rounded-2xl overflow-hidden relative shadow-elevated">
                             <!-- CORRECTED WISTIA EMBED -->
                             <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                                <div class="wistia_responsive_wrapper"
-                                    style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                                    <div class="wistia_embed wistia_async_btepmofb52 videoFoam=true"
-                                        style="height:100%;position:relative;width:100%">
-                                        <div class="wistia_swatch"
-                                            style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                                            <img src="https://fast.wistia.com/embed/medias/btepmofb52/swatch"
-                                                style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
-                                                alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                    <div class="wistia_embed wistia_async_btepmofb52 videoFoam=true" style="height:100%;position:relative;width:100%">
+                                        <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                            <img src="https://fast.wistia.com/embed/medias/btepmofb52/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
                                         </div>
                                     </div>
                                 </div>
@@ -589,13 +524,11 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                            <button id="startTestButtonVideo"
-                                class="btn-primary px-10 py-4 rounded-xl text-lg flex items-center justify-center space-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-6 h-6 mr-2">
-                                    <polygon points="5 3 19 12 5 21 5 3" />
-                                </svg>
+                            <button
+                                id="startTestButtonVideo"
+                                class="btn-primary px-10 py-4 rounded-xl text-lg flex items-center justify-center space-x-3"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 <span>Começar Teste Grátis</span>
                             </button>
                         </div>
@@ -603,8 +536,7 @@
                     <!-- END OF NEW SECTION -->
                 </div>
 
-                <div
-                    class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-3 sm:gap-x-8 sm:gap-y-4 text-sm text-muted-foreground">
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-3 sm:gap-x-8 sm:gap-y-4 text-sm text-muted-foreground">
                     <div class="flex items-center gap-2">
                         <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i>
                         <span>Sem cartão de crédito</span>
@@ -626,12 +558,10 @@
     <section class="py-32 section-gradient">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="text-center mb-20">
-                <span
-                    class="inline-flex items-center rounded-full bg-green-500/10 text-green-500 px-4 py-2 text-sm font-semibold mb-8">
+                <span class="inline-flex items-center rounded-full bg-green-500/10 text-green-500 px-4 py-2 text-sm font-semibold mb-8">
                     Nossa Solução
                 </span>
-                <h2 class="text-headline mb-8 text-gradient-primary font-black tracking-tight">Por que Escolher Nossa
-                    Solução?</h2>
+                <h2 class="text-headline mb-8 text-gradient-primary font-black tracking-tight">Por que Escolher Nossa Solução?</h2>
                 <p class="text-body-lg text-muted-foreground max-w-3xl mx-auto">
                     Simplifique sua gestão financeira com as ferramentas mais avançadas do mercado.
                 </p>
@@ -639,29 +569,21 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-2xl text-center hover-lift">
-                    <img src="https://loanbuddy.cloud/imagem03.svg" alt="Gestão de Clientes"
-                        class="w-full h-48 object-contain mb-6"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Clientes';">
-                    <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Gestão de Clientes Simplificada
-                    </h3>
+                    <img src="https://loanbuddy.cloud/imagem03.svg" alt="Gestão de Clientes" class="w-full h-100 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Clientes';">
+                    <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Gestão de Clientes Simplificada</h3>
                     <p class="text-muted-foreground leading-relaxed">
                         Tenha todas as informações dos seus clientes organizadas e acessíveis em um único lugar.
                     </p>
                 </div>
                 <div class="glass-card p-8 rounded-2xl text-center hover-lift">
-                    <img src="https://loanbuddy.cloud/imagem01.svg" alt="Gestão de Contratos"
-                        class="w-full h-48 object-contain mb-6"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Contratos';">
-                    <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Gestão de Contratos Inteligente
-                    </h3>
+                    <img src="https://loanbuddy.cloud/imagem01.svg" alt="Gestão de Contratos" class="w-full h-100 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Contratos';">
+                    <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Gestão de Contratos Inteligente</h3>
                     <p class="text-muted-foreground leading-relaxed">
                         Crie, edite e acompanhe contratos com facilidade e acompanhe todo o ciclo de vida dos mesmos.
                     </p>
                 </div>
                 <div class="glass-card p-8 rounded-2xl text-center hover-lift">
-                    <img src="https://loanbuddy.cloud/imagem02.svg" alt="Acompanhamento de Recebíveis"
-                        class="w-full h-48 object-contain mb-6"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Recebíveis';">
+                    <img src="https://loanbuddy.cloud/imagem02.svg" alt="Acompanhamento de Recebíveis" class="w-full h-100 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Recebíveis';">
                     <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Acompanhamento de Recebíveis</h3>
                     <p class="text-muted-foreground leading-relaxed">
                         Monitore automaticamente as parcelas recebíveis e acompanhe parcelas atrasadas.
@@ -670,54 +592,51 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Enhanced Dashboard Showcase -->
     <section class="py-16 sm:py-20 hero-gradient">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-16 sm:mb-20">
-                <span
-                    class="inline-flex items-center rounded-full bg-blue-500/10 text-blue-500 px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
+                <span class="inline-flex items-center rounded-full bg-blue-500/10 text-blue-500 px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
                     Dashboard Completo
                 </span>
-                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">Controle Total do
-                    seu Negócio</h2>
+                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">Controle Total do seu Negócio</h2>
                 <p class="text-lg sm:text-body-lg text-muted-foreground max-w-4xl mx-auto">
-                    Acesse todas as informações importantes num único ecrã com gráficos interativos e métricas em tempo
-                    real.
+                    Acesse todas as informações importantes num único ecrã com gráficos interativos e métricas em tempo real.
                 </p>
             </div>
 
             <div class="max-w-7xl mx-auto">
                 <div class="glass-card p-4 sm:p-8 rounded-3xl shadow-floating hover-lift">
                     <div class="relative">
-                        <img src="https://danieloutliers.github.io/kiwi/lovable-uploads/566f6bfb-0f19-419f-b8ff-accba36b1009.png"
-                            alt="Dashboard completo do loanBuddy" class="w-full h-auto rounded-2xl shadow-elevated"
-                            onerror="this.onerror=null;this.src='https://placehold.co/1200x800/e2e8f0/475569?text=Dashboard+Preview';" />
+                        <img
+                            src="https://danieloutliers.github.io/kiwi/lovable-uploads/566f6bfb-0f19-419f-b8ff-accba36b1009.png"
+                            alt="Dashboard completo do loanBuddy"
+                            class="w-full h-auto rounded-2xl shadow-elevated"
+                            onerror="this.onerror=null;this.src='https://placehold.co/1200x800/e2e8f0/475569?text=Dashboard+Preview';"
+                        />
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-8 mt-12">
                         <div class="text-center group hover-scale p-4">
                             <div class="icon-gradient w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+                               <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
                             </div>
-                            <h3 class="font-bold text-lg text-foreground mb-2 tracking-tight">Métricas em Tempo Real
-                            </h3>
+                            <h3 class="font-bold text-lg text-foreground mb-2 tracking-tight">Métricas em Tempo Real</h3>
                             <p class="text-muted-foreground">Acompanhe receitas e performance instantaneamente.</p>
                         </div>
                         <div class="text-center group hover-scale p-4">
                             <div class="icon-gradient w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <i data-lucide="brain-circuit" class="w-7 h-7"></i>
                             </div>
-                            <h3 class="font-bold text-lg text-foreground mb-2 tracking-tight">Inteligência Artificial
-                            </h3>
+                            <h3 class="font-bold text-lg text-foreground mb-2 tracking-tight">Inteligência Artificial</h3>
                             <p class="text-muted-foreground">Análises preditivas e insights para crescer.</p>
                         </div>
                         <div class="text-center group hover-scale p-4">
                             <div class="icon-gradient w-16 h-16 flex items-center justify-center mx-auto mb-4">
                                 <i data-lucide="smartphone" class="w-7 h-7"></i>
                             </div>
-                            <h3 class="font-bold text-lg text-foreground mb-2 tracking-tight">Acesso Multiplataforma
-                            </h3>
+                            <h3 class="font-bold text-lg text-foreground mb-2 tracking-tight">Acesso Multiplataforma</h3>
                             <p class="text-muted-foreground">Use em qualquer dispositivo, online ou offline.</p>
                         </div>
                     </div>
@@ -730,12 +649,10 @@
     <section id="features" class="py-16 sm:py-20 section-gradient">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-16 sm:mb-20">
-                <span
-                    class="inline-flex items-center rounded-full bg-purple-600/10 text-purple-600 px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
+                <span class="inline-flex items-center rounded-full bg-purple-600/10 text-purple-600 px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
                     Funcionalidades Premium
                 </span>
-                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">Tudo o que
-                    precisa</h2>
+                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">Tudo o que precisa</h2>
                 <p class="text-lg sm:text-body-lg text-muted-foreground max-w-3xl mx-auto">
                     Gerencie os seus contratos com eficiência máxima usando tecnologia de ponta.
                 </p>
@@ -750,17 +667,15 @@
     <section id="pricing" class="py-16 sm:py-24">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-12 sm:mb-16">
-                <span
-                    class="inline-flex items-center rounded-full bg-green-500/10 text-green-500 px-4 py-2 text-sm font-semibold mb-6">
+                <span class="inline-flex items-center rounded-full bg-green-500/10 text-green-500 px-4 py-2 text-sm font-semibold mb-6">
                     Planos e Preços
                 </span>
-                <h2 class="text-headline mb-4 text-gradient-primary font-black tracking-tight">Escolha o Plano Ideal
-                </h2>
+                <h2 class="text-headline mb-4 text-gradient-primary font-black tracking-tight">Escolha o Plano Ideal</h2>
                 <p class="text-lg sm:text-body-lg text-muted-foreground max-w-3xl mx-auto">
                     Soluções flexíveis para todos os tipos de negócio, desde iniciantes a grandes empresas.
                 </p>
             </div>
-
+            
             <!-- NEW: Pricing Toggle -->
             <div class="flex justify-center items-center mb-12 space-x-4">
                 <div class="pricing-toggle" id="pricingToggle">
@@ -768,8 +683,7 @@
                     <div class="pricing-toggle-option active" data-period="monthly">Mensal</div>
                     <div class="pricing-toggle-option" data-period="annually">Anual</div>
                 </div>
-                <span
-                    class="inline-flex items-center rounded-full bg-accent/10 text-accent px-3 py-1 text-xs font-bold">
+                <span class="inline-flex items-center rounded-full bg-accent/10 text-accent px-3 py-1 text-xs font-bold">
                     Poupe 2 meses!
                 </span>
             </div>
@@ -784,12 +698,10 @@
     <section id="faq" class="py-16 sm:py-20 hero-gradient">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-16 sm:mb-20">
-                <span
-                    class="inline-flex items-center rounded-full bg-blue-500/10 text-blue-500 px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
+                <span class="inline-flex items-center rounded-full bg-blue-500/10 text-blue-500 px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
                     Dúvidas Frequentes
                 </span>
-                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">Perguntas
-                    Frequentes</h2>
+                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">Perguntas Frequentes</h2>
                 <p class="text-lg sm:text-body-lg text-muted-foreground max-w-3xl mx-auto">
                     Tire as suas dúvidas sobre o loanBuddy e descubra como podemos ajudar o seu negócio.
                 </p>
@@ -804,12 +716,10 @@
     <section id="testimonials" class="py-16 sm:py-20 section-gradient">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-16 sm:mb-20">
-                <span
-                    class="inline-flex items-center rounded-full bg-accent/10 text-accent px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
+                <span class="inline-flex items-center rounded-full bg-accent/10 text-accent px-4 py-2 text-sm font-semibold mb-6 sm:mb-8">
                     Depoimentos
                 </span>
-                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">O que os nossos
-                    clientes dizem</h2>
+                <h2 class="text-headline mb-4 sm:mb-8 text-gradient-primary font-black tracking-tight">O que os nossos clientes dizem</h2>
                 <p class="text-lg sm:text-body-lg text-muted-foreground max-w-3xl mx-auto">
                     Histórias de sucesso de quem transformou a gestão de contratos com o LoanBuddy Pro.
                 </p>
@@ -821,16 +731,14 @@
     </section>
 
     <!-- Enhanced CTA Section -->
-    <section
-        class="py-16 sm:py-20 bg-gradient-to-br from-blue-500 via-purple-600 to-green-500 text-white relative overflow-hidden">
+    <section class="py-16 sm:py-20 bg-gradient-to-br from-blue-500 via-purple-600 to-green-500 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
             <h2 class="text-headline mb-6 sm:mb-8 font-black tracking-tight">Pronto para Transformar o seu Negócio?</h2>
             <p class="text-lg sm:text-xl mb-10 sm:mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
                 Junte-se a milhares de empresários que já revolucionaram os seus negócios com o LoanBuddy Pro.
             </p>
-            <button id="ctaButton"
-                class="btn-cta px-10 py-4 sm:px-12 rounded-xl text-base sm:text-lg font-bold flex items-center space-x-3 mx-auto shadow-floating">
+            <button id="ctaButton" class="btn-cta px-10 py-4 sm:px-12 rounded-xl text-base sm:text-lg font-bold flex items-center space-x-3 mx-auto shadow-floating">
                 <i data-lucide="zap" class="w-5 h-5"></i>
                 <span>Começar Teste Grátis</span>
             </button>
@@ -852,7 +760,7 @@
                         A solução mais completa e inteligente para gestão de contratos, potencializada por IA.
                     </p>
                 </div>
-
+                
                 <div class="md:col-span-1">
                     <h4 class="font-semibold mb-6 text-foreground text-lg">Produto</h4>
                     <ul class="space-y-3 text-muted-foreground">
@@ -889,12 +797,12 @@
         // This section holds the data used to dynamically populate the page.
         // This makes content updates easier without touching the HTML structure.
         const featuresData = [
-            {icon: 'bar-chart-3', title: "Dashboard Inteligente", description: "Visualize todos os seus contratos, pagamentos e métricas em tempo real com gráficos interativos e insights automatizados powered by AI."},
-            {icon: 'users', title: "Gestão de Mutuários", description: "Cadastre e gerencie informações completas dos seus clientes com histórico de crédito, análise de risco e perfil comportamental."},
-            {icon: 'credit-card', title: "Controle de Pagamentos", description: "Acompanhe vencimentos, registre pagamentos e envie lembretes automáticos via WhatsApp, email e SMS com inteligência artificial."},
-            {icon: 'shield', title: "Segurança Total", description: "Seus dados protegidos com criptografia de ponta, backup automático na nuvem, autenticação biométrica e compliance LGPD."},
-            {icon: 'bell', title: "Notificações Inteligentes", description: "Receba alertas personalizados de vencimentos, atrasos e oportunidades de negócio com predições baseadas em machine learning."},
-            {icon: 'trending-up', title: "Relatórios Avançados", description: "Análises detalhadas de performance, lucratividade e projeções com IA para otimizar seu negócio e maximizar resultados."}
+            { icon: 'bar-chart-3', title: "Dashboard Inteligente", description: "Visualize todos os seus contratos, pagamentos e métricas em tempo real com gráficos interativos e insights automatizados powered by AI." },
+            { icon: 'users', title: "Gestão de Mutuários", description: "Cadastre e gerencie informações completas dos seus clientes com histórico de crédito, análise de risco e perfil comportamental." },
+            { icon: 'credit-card', title: "Controle de Pagamentos", description: "Acompanhe vencimentos, registre pagamentos e envie lembretes automáticos via WhatsApp, email e SMS com inteligência artificial." },
+            { icon: 'shield', title: "Segurança Total", description: "Seus dados protegidos com criptografia de ponta, backup automático na nuvem, autenticação biométrica e compliance LGPD." },
+            { icon: 'bell', title: "Notificações Inteligentes", description: "Receba alertas personalizados de vencimentos, atrasos e oportunidades de negócio com predições baseadas em machine learning." },
+            { icon: 'trending-up', title: "Relatórios Avançados", description: "Análises detalhadas de performance, lucratividade e projeções com IA para otimizar seu negócio e maximizar resultados." }
         ];
 
         // UPDATED: Pricing data with new plan names
@@ -905,8 +813,8 @@
                 description: "Acesso completo para avaliação, sem compromisso.",
                 features: ["Até 5 clientes", "Até 10 contratos", "Relatórios básicos", "Suporte por email", "Dashboard completo", "Backup na nuvem"],
                 billing: {
-                    monthly: {price: "R$ 0", period: "por 3 dias"},
-                    annually: {price: "R$ 0", period: "por 3 dias"}
+                    monthly: { price: "R$ 0", period: "por 3 dias" },
+                    annually: { price: "R$ 0", period: "por 3 dias" }
                 },
                 ctaText: "Começar Teste Grátis"
             },
@@ -917,8 +825,8 @@
                 description: "Ideal para a maioria dos negócios em crescimento.",
                 features: ["Clientes ilimitados", "Contratos ilimitados", "Relatórios completos", "Notificações automáticas", "Backup automático", "Suporte prioritário", "App mobile", "Integração WhatsApp"],
                 billing: {
-                    monthly: {price: "R$ 37", period: "/mês"},
-                    annually: {price: "R$ 370", period: "/ano"}
+                    monthly: { price: "R$ 37", period: "/mês" },
+                    annually: { price: "R$ 370", period: "/ano" }
                 },
                 ctaText: "Assinar Agora"
             },
@@ -929,26 +837,26 @@
                 description: "Para usuários avançados e com desconto trimestral.",
                 features: ["Tudo do plano Básico", "API de integração", "Relatórios avançados com IA", "Múltiplos usuários", "White label personalizado", "Suporte 24/7", "Consultoria especializada", "Análise preditiva"],
                 billing: {
-                    monthly: {price: "R$ 97", period: "/3 meses"},
-                    annually: {price: "R$ 970", period: "/ano"}
+                    monthly: { price: "R$ 97", period: "/3 meses" },
+                    annually: { price: "R$ 970", period: "/ano" }
                 },
                 ctaText: "Assinar Agora"
             }
         ];
 
         const faqsData = [
-            {question: "Como funciona o período de teste gratuito?", answer: "Você tem 3 dias completos para testar todas as funcionalidades do sistema, sem compromisso e sem necessidade de cartão de crédito. Acesso total a todas as features premium, incluindo relatórios avançados e inteligência artificial."},
-            {question: "Posso cancelar a minha assinatura a qualquer momento?", answer: "Sim! Você pode cancelar a sua assinatura a qualquer momento através das configurações da sua conta. Não há multas, taxas de cancelamento ou fidelização. A sua satisfação é a nossa prioridade."},
-            {question: "Os meus dados estão seguros?", answer: "Absolutamente! Utilizamos criptografia de ponta a ponta, backup automático na nuvem e seguimos todas as normas LGPD. Os seus dados estão protegidos com os mais altos padrões de segurança internacionais."},
-            {question: "O sistema funciona offline?", answer: "Sim! O loanBuddy funciona completamente offline em dispositivos móveis e sincroniza automaticamente quando a conexão é restaurada. Perfeito para trabalhar em qualquer lugar, mesmo sem internet."},
-            {question: "Existe limite de clientes ou contratos?", answer: "No plano Básico e Profissional não há limites. Você pode cadastrar quantos clientes e contratos precisar para fazer o seu negócio crescer sem restrições. Crescimento ilimitado garantido."},
-            {question: "Como funciona o suporte técnico?", answer: "Oferecemos suporte via email, chat e WhatsApp. No plano Profissional incluímos suporte 24/7 e consultoria especializada para otimizar o seu uso do sistema e maximizar os seus resultados."}
+            { question: "Como funciona o período de teste gratuito?", answer: "Você tem 3 dias completos para testar todas as funcionalidades do sistema, sem compromisso e sem necessidade de cartão de crédito. Acesso total a todas as features premium, incluindo relatórios avançados e inteligência artificial." },
+            { question: "Posso cancelar a minha assinatura a qualquer momento?", answer: "Sim! Você pode cancelar a sua assinatura a qualquer momento através das configurações da sua conta. Não há multas, taxas de cancelamento ou fidelização. A sua satisfação é a nossa prioridade." },
+            { question: "Os meus dados estão seguros?", answer: "Absolutamente! Utilizamos criptografia de ponta a ponta, backup automático na nuvem e seguimos todas as normas LGPD. Os seus dados estão protegidos com os mais altos padrões de segurança internacionais." },
+            { question: "O sistema funciona offline?", answer: "Sim! O loanBuddy funciona completamente offline em dispositivos móveis e sincroniza automaticamente quando a conexão é restaurada. Perfeito para trabalhar em qualquer lugar, mesmo sem internet." },
+            { question: "Existe limite de clientes ou contratos?", answer: "No plano Básico e Profissional não há limites. Você pode cadastrar quantos clientes e contratos precisar para fazer o seu negócio crescer sem restrições. Crescimento ilimitado garantido." },
+            { question: "Como funciona o suporte técnico?", answer: "Oferecemos suporte via email, chat e WhatsApp. No plano Profissional incluímos suporte 24/7 e consultoria especializada para otimizar o seu uso do sistema e maximizar os seus resultados." }
         ];
 
         const testimonialsData = [
-            {quote: "O LoanBuddy Pro revolucionou a forma como gerencio os meus contratos. É intuitivo, completo e a IA dá-me insights valiosos que triplicaram o meu faturamento!", author: "João Carlos Miranda", role: "Consultor Financeiro", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"},
-            {quote: "Nunca mais perdi um pagamento! As notificações automáticas e o controlo de recebíveis são um divisor de águas para o meu negócio. Recomendo demais!", author: "Ricardo Alves", role: "Gestor de Crédito", avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop&crop=face"},
-            {quote: "A segurança dos dados era uma preocupação, mas o LoanBuddy Pro deu-me total tranquilidade. O sistema é robusto e confiável. Perfeito para o meu negócio!", author: "Marcos Ferreira", role: "Investidor", avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=face"}
+            { quote: "O LoanBuddy Pro revolucionou a forma como gerencio os meus contratos. É intuitivo, completo e a IA dá-me insights valiosos que triplicaram o meu faturamento!", author: "João Carlos Miranda", role: "Consultor Financeiro", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" },
+            { quote: "Nunca mais perdi um pagamento! As notificações automáticas e o controlo de recebíveis são um divisor de águas para o meu negócio. Recomendo demais!", author: "Ricardo Alves", role: "Gestor de Crédito", avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop&crop=face" },
+            { quote: "A segurança dos dados era uma preocupação, mas o LoanBuddy Pro deu-me total tranquilidade. O sistema é robusto e confiável. Perfeito para o meu negócio!", author: "Marcos Ferreira", role: "Investidor", avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=face" }
         ];
 
         // --- CORE LOGIC ---
@@ -957,11 +865,11 @@
             if (tab === 'login') {
                 window.location.href = 'https://app.loanbuddy.cloud/';
             } else {
-                // Updated registration link
-                window.location.href = 'https://app.loanbuddy.cloud/register';
+                // Assuming registration still uses the old link structure
+                window.location.href = `https://loanbuddy.cloud/auth?tab=${tab}`;
             }
         }
-
+        
         // NEW: Function to render pricing plans based on selected period
         function renderPricingPlans(period = 'monthly') {
             const pricingContainer = document.getElementById('pricing-container');
@@ -973,7 +881,7 @@
                 const card = document.createElement('div');
                 const isPopular = plan.popular;
                 card.className = `plan-card ${isPopular ? 'plan-card--popular' : ''}`;
-
+                
                 const billingInfo = plan.billing[period];
 
                 card.innerHTML = `
@@ -1011,11 +919,11 @@
 
 
         // Main execution block when the DOM is ready.
-        document.addEventListener('DOMContentLoaded', function () {
-
+        document.addEventListener('DOMContentLoaded', function() {
+            
             // --- DYNAMIC CONTENT INJECTION ---
             const featuresContainer = document.getElementById('features-container');
-            if (featuresContainer) {
+            if(featuresContainer) {
                 featuresData.forEach((feature, index) => {
                     const card = document.createElement('div');
                     card.className = 'glass-card p-6 sm:p-8 rounded-2xl hover-lift shadow-elegant transition-all duration-300';
@@ -1035,7 +943,7 @@
             renderPricingPlans('monthly');
 
             const faqContainer = document.getElementById('faq-container');
-            if (faqContainer) {
+            if(faqContainer) {
                 faqsData.forEach((faq, index) => {
                     const item = document.createElement('div');
                     item.className = 'glass-card rounded-2xl shadow-elegant hover:shadow-elevated transition-all duration-300 overflow-hidden';
@@ -1087,7 +995,7 @@
             }
 
             const testimonialsContainer = document.getElementById('testimonials-container');
-            if (testimonialsContainer) {
+            if(testimonialsContainer) {
                 testimonialsData.forEach((testimonial, index) => {
                     const card = document.createElement('div');
                     card.className = 'glass-card p-6 sm:p-8 rounded-2xl shadow-elegant hover-lift transition-all duration-300';
@@ -1109,7 +1017,7 @@
             // --- EVENT LISTENERS ---
             document.getElementById('loginButton')?.addEventListener('click', () => navigateToAuth('login'));
             document.getElementById('testDriveButton')?.addEventListener('click', () => navigateToAuth('register'));
-            document.getElementById('demoButton')?.addEventListener('click', () => document.getElementById('demo')?.scrollIntoView({behavior: 'smooth'}));
+            document.getElementById('demoButton')?.addEventListener('click', () => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' }));
             document.getElementById('ctaButton')?.addEventListener('click', () => navigateToAuth('register'));
             document.getElementById('startTestButtonVideo')?.addEventListener('click', () => navigateToAuth('register'));
 
@@ -1118,22 +1026,22 @@
             if (pricingToggle) {
                 const toggleBg = document.getElementById('pricingToggleBg');
                 const options = pricingToggle.querySelectorAll('.pricing-toggle-option');
-
+                
                 options.forEach(option => {
                     option.addEventListener('click', () => {
                         const period = option.dataset.period;
-
+                        
                         // Update active class
                         options.forEach(opt => opt.classList.remove('active'));
                         option.classList.add('active');
-
+                        
                         // Move background
                         if (period === 'annually') {
                             toggleBg.style.transform = 'translateX(100%)';
                         } else {
                             toggleBg.style.transform = 'translateX(0%)';
                         }
-
+                        
                         // Re-render plans
                         renderPricingPlans(period);
                     });
@@ -1144,26 +1052,26 @@
             // --- UI EFFECTS ---
             const scrollIndicator = document.getElementById('scrollIndicator');
             const header = document.getElementById('header');
-
+            
             window.addEventListener('scroll', () => {
                 // Scroll Indicator
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrollPercent = (window.scrollY / docHeight);
-                if (scrollIndicator) scrollIndicator.style.transform = `scaleX(${scrollPercent})`;
-
+                if(scrollIndicator) scrollIndicator.style.transform = `scaleX(${scrollPercent})`;
+                
                 // Header style change
-                if (header) header.classList.toggle('shadow-md', window.scrollY > 50);
+                if(header) header.classList.toggle('shadow-md', window.scrollY > 50);
 
-            }, {passive: true});
-
+            }, { passive: true });
+            
             // Smooth scrolling for all anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                 });
             });
@@ -1176,12 +1084,11 @@
 
             // Initialize Lucide Icons
             lucide.createIcons();
-
+            
             console.log('🚀 LoanBuddy Pro landing page loaded successfully!');
         });
 
         // REMOVED: Wistia script loading from here as it's now in the HTML body
     </script>
 </body>
-
 </html>
