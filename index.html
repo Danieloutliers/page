@@ -569,21 +569,21 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-2xl text-center hover-lift">
-                    <img src="https://loanbuddy.cloud/imagem03.svg" alt="Gestão de Clientes" class="w-full h-100 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Clientes';">
+                    <img src="https://loanbuddy.cloud/imagem03.svg" alt="Gestão de Clientes" class="w-full h-48 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Clientes';">
                     <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Gestão de Clientes Simplificada</h3>
                     <p class="text-muted-foreground leading-relaxed">
                         Tenha todas as informações dos seus clientes organizadas e acessíveis em um único lugar.
                     </p>
                 </div>
                 <div class="glass-card p-8 rounded-2xl text-center hover-lift">
-                    <img src="https://loanbuddy.cloud/imagem01.svg" alt="Gestão de Contratos" class="w-full h-100 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Contratos';">
+                    <img src="https://loanbuddy.cloud/imagem01.svg" alt="Gestão de Contratos" class="w-full h-48 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Gestão+de+Contratos';">
                     <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Gestão de Contratos Inteligente</h3>
                     <p class="text-muted-foreground leading-relaxed">
                         Crie, edite e acompanhe contratos com facilidade e acompanhe todo o ciclo de vida dos mesmos.
                     </p>
                 </div>
                 <div class="glass-card p-8 rounded-2xl text-center hover-lift">
-                    <img src="https://loanbuddy.cloud/imagem02.svg" alt="Acompanhamento de Recebíveis" class="w-full h-100 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Recebíveis';">
+                    <img src="https://loanbuddy.cloud/imagem02.svg" alt="Acompanhamento de Recebíveis" class="w-full h-48 object-contain mb-6" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/475569?text=Recebíveis';">
                     <h3 class="text-xl font-bold mb-3 text-foreground tracking-tight">Acompanhamento de Recebíveis</h3>
                     <p class="text-muted-foreground leading-relaxed">
                         Monitore automaticamente as parcelas recebíveis e acompanhe parcelas atrasadas.
@@ -865,8 +865,7 @@
             if (tab === 'login') {
                 window.location.href = 'https://app.loanbuddy.cloud/';
             } else {
-                // Assuming registration still uses the old link structure
-                window.location.href = `https://loanbuddy.cloud/auth?tab=${tab}`;
+                window.location.href = 'https://app.loanbuddy.cloud/auth?tab=register';
             }
         }
         
